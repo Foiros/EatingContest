@@ -14,14 +14,10 @@ for episode in range(1, episodes+1):
     totalReward = 0
 
     while not done:
-        env.render()
         action = env.action_space.sample()
         score, reward, done = env.step(action)
-        totalScore += score
+        totalScore = score
         totalReward += reward
+        env.render()
 
     print('Episode: {}, Score: {}, Reward: {}'.format(episode, totalScore, totalReward))
-
-
-
-
