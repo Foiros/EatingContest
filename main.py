@@ -20,7 +20,7 @@ for episode in range(1, episodes+1):
         totalScore += score
         totalReward += reward
 
-    print('Episode:{}, Score:{}, Reward:{}'.format(episode, totalScore, totalReward))
+    print('Episode: {}, Score: {}, Reward: {}'.format(episode, totalScore, totalReward))
 
 
 
