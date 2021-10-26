@@ -1,7 +1,7 @@
 import pyglet
 import gym
 from gym import Env
-from gym.spaces import Discrete
+from gym.spaces import Discrete, Box
 import random
 import numpy as np
 import Food
@@ -11,6 +11,8 @@ class EatingContest(Env):
     def __init__(self):
         # Eat either number one, two, three or four
         self.action_space = Discrete(4)
+
+        self.observation_space = Box(low=np.array([0]), high=np.array([100]))
 
         # Set all the different food
         self.foods = None
